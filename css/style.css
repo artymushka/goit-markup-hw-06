@@ -89,6 +89,11 @@ img {
     background-color: #ffffff;
 }
 
+.mobile-menu-container{
+    padding-top: 72px;
+    padding-bottom: 40px;
+}
+
 .mobile-menu-close-button {
     position: absolute;
     top: 24px;
@@ -105,20 +110,23 @@ img {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-top: 72px ;
-    margin-bottom: 168px;
+    margin-bottom: auto;
 }
 
 .mobile-menu-link {
     font-weight: 700;
     font-size: 36px;
     line-height: 2.5rem;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
     color: #2E2F42;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-menu-link:focus {
+.mobile-menu-link.current{
+    color: #404BBF;
+}
+
+.mobile-menu-link:active {
     color: #404BBF;
 }
 
@@ -138,7 +146,11 @@ img {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-address-link:focus{
+.mobile-address-link.current{
+    color: #4D5AE5;
+}
+
+.mobile-address-link:active{
     color: #4D5AE5;
 }
 
@@ -162,7 +174,7 @@ img {
 }
 
 .backdrop.is-open {
-    opacity: 0;
+    opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
@@ -228,7 +240,7 @@ img {
 }
 
 .backdrop.is-open {
-    opacity: 0;
+    opacity: 1;
     visibility: visible;
     pointer-events: auto;
 }
@@ -442,7 +454,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     padding: 72px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-mobile.jpg);
     background-color: #2E2F42;
     background-size: cover;
     background-repeat: no-repeat;
@@ -523,7 +535,7 @@ img {
 }
 
 .third-title-list {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 24px;
     letter-spacing: 0.02em;
@@ -764,7 +776,6 @@ img {
     letter-spacing: 0.02em;
     color: #F4F4FD;
     max-width: 264px;
-    margin-bottom: 72px;
 }
 
 .second {
@@ -856,6 +867,12 @@ img {
     fill: #ffffff;
 }
 
+@media only screen and (min-resolution: 192dpi) and (max-width: 767px) {
+    .title{
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-mobile@2x.jpg);
+    }
+}
+
 @media screen and (min-width: 768px) {
     .container {
         max-width: 768px;
@@ -944,6 +961,7 @@ img {
     .title {
         max-width: 768px;
         padding: 112px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-tablet.jpg);
     }
 
     .title-list {
@@ -961,8 +979,8 @@ img {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        column-gap: 72px;
-        row-gap: 24px;
+        column-gap: 24px;
+        row-gap: 72px;
     }
 
     .third-title-list{
@@ -974,7 +992,7 @@ img {
     } */
 
     .first-slider-content{
-        width: calc((100% - 24px * 3) / 2);
+        width: calc((100% - 24px) / 2);
     }
 
     .icon-container {
@@ -1067,6 +1085,12 @@ img {
     }
 }
 
+@media only screen and (min-resolution: 192dpi) and (min-width: 768px) {
+    .title {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-tablet@2x.jpg);
+    }
+}
+
 @media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
@@ -1087,9 +1111,12 @@ img {
         line-height: 1.5;
     }
 
+    /*SECTION_1*/
     .title {
         min-width: 1158px;
-        padding-top: 188px;
+        padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people-office-desktop.jpg);
     }
 
     .title-list {
@@ -1127,6 +1154,10 @@ img {
     .third-title-list {
         font-size: 20px;
         text-align: left;
+    }
+
+    .description{
+        font-weight: 400;
     }
 
     /*SECTION_2*/
@@ -1185,13 +1216,14 @@ img {
         margin-left: 80px;
     }
 
-    .footer-form {
-        display: flex;
-        gap: 24px;
-    }
-
     .footer-email-icon {
         margin-left: 16px;
         fill: #ffffff;
+    }
+}
+
+@media only screen and (min-resolution: 192dpi) and (min-width: 1158px) {
+    .title {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-desktop@2x.jpg);
     }
 }
